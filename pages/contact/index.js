@@ -14,7 +14,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     try {
       axios
-        .post(`http://localhost:3000/api/hello`, {
+        .post(`/api/hello`, {
           name: name,
         })
         .then((response) => {
