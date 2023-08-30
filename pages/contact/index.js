@@ -51,6 +51,7 @@ const Contact = () => {
                 onChange={(event) => setName(event.target.value)}
               />
               <button
+                type="button"
                 onClick={() => {
                   handleSubmit();
                 }}
