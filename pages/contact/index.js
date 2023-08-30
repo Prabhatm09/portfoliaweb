@@ -12,9 +12,20 @@ const Contact = () => {
   const [name, setName] = useState("vishal");
 
   const handleSubmit = (e) => {
-    axios.post(`http://localhost:3000/api/hello`, {
-      name: name,
-    });
+    try {
+      axios
+        .post(`http://localhost:3000/api/hello`, {
+          name: name,
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
